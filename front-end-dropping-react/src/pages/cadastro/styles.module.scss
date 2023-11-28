@@ -1,0 +1,72 @@
+.cadastroContainer {
+    .s1 {
+        height: 57vh;
+
+        .s1Content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .s1Img {
+                margin-top: 3rem;
+                max-width: 400px;
+            }
+
+            form {
+
+                .inputImgUsuario,
+                .inputImgSenha {
+                    display: block;
+                    width: 340px               
+                 }
+                .inputImgUsuario input{
+                    width: 93%;
+                    padding: 10px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    margin-top: 12px;
+                }
+                .inputImgSenha input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    margin-top: 12px;
+                }
+
+                .inputImgEmail input {
+                    width: 93%;
+                    padding: 10px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                }
+
+                .inputImgTelefone input {
+                    width: 93%;
+                    padding: 10px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                }
+
+                .customButton {
+                    width: 93%;
+                    padding: 10px;
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .cadastroLink {
+                    display: block;
+                    margin-top: 10px;
+                    font-family: "Jost", sans-serif;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

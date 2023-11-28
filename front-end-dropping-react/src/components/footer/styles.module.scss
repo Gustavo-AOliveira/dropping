@@ -1,0 +1,52 @@
+.footerContainer {
+    .footer {
+        display: flex;
+        gap: 150px;
+        justify-content: center;
+        margin-top: 160px;
+        height: 50vh;
+        font-family: 'Jost', sans-serif;
+    
+        .footerContainer {
+            display: flex;
+            flex-direction: column;
+    
+            .listTitulo {
+                margin-bottom: 30px;
+                text-decoration: none;
+                color: black;
+                font-weight:500;
+            }
+    
+            .listItem {
+                margin-top: 10px;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    
+    .footerDireitos {
+        color: black;
+        
+        font-weight: 400;
+        font-family: "Jost", sans-serif;
+        margin-bottom: 10px;
+        
+
+        text-align: center;
+    }
+    
+    .footerLinks {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 830px) {
+    .footerDireitos {
+        padding-top: 200px;
+    }
+}

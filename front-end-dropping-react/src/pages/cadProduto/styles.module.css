@@ -1,0 +1,70 @@
+.cadProdutoContainer .s1 {
+  height: 100vh;
+}
+.cadProdutoContainer .s1 .s1Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cadProdutoContainer .s1 .s1Content .s1Img {
+  margin-top: 2rem;
+  max-width: 400px;
+}
+.cadProdutoContainer .s1 .s1Content .titulo {
+  font-family: "Poppins", sans-serif;
+  margin-top: 3%;
+  margin-right: 2%;
+}
+.cadProdutoContainer .s1 .s1Content form {
+  width: 300px;
+}
+.cadProdutoContainer .s1 .s1Content form .inputImgUsuario,
+.cadProdutoContainer .s1 .s1Content form .inputImgSenha {
+  display: block;
+  width: 300px;
+}
+.cadProdutoContainer .s1 .s1Content form .inputImgUsuario input,
+.cadProdutoContainer .s1 .s1Content form .inputImgSenha input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+.cadProdutoContainer .s1 .s1Content form .inputImgEmail input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.cadProdutoContainer .s1 .s1Content form .inputImgTelefone input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.cadProdutoContainer .s1 .s1Content form .inputFile {
+  display: flex;
+  width: 93%;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+}
+.cadProdutoContainer .s1 .s1Content form .customButton {
+  width: 93%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cadProdutoContainer .s1 .s1Content form .cadastroLink {
+  display: block;
+  margin-top: 10px;
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+}/*# sourceMappingURL=styles.module.css.map */

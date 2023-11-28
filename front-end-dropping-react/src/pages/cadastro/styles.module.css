@@ -1,0 +1,60 @@
+.cadastroContainer .s1 {
+  height: 57vh;
+}
+.cadastroContainer .s1 .s1Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cadastroContainer .s1 .s1Content .s1Img {
+  margin-top: 3rem;
+  max-width: 400px;
+}
+.cadastroContainer .s1 .s1Content form .inputImgUsuario,
+.cadastroContainer .s1 .s1Content form .inputImgSenha {
+  display: block;
+  width: 340px;
+}
+.cadastroContainer .s1 .s1Content form .inputImgUsuario input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+.cadastroContainer .s1 .s1Content form .inputImgSenha input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+.cadastroContainer .s1 .s1Content form .inputImgEmail input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.cadastroContainer .s1 .s1Content form .inputImgTelefone input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.cadastroContainer .s1 .s1Content form .customButton {
+  width: 93%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cadastroContainer .s1 .s1Content form .cadastroLink {
+  display: block;
+  margin-top: 10px;
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+}/*# sourceMappingURL=styles.module.css.map */
