@@ -31,19 +31,18 @@ async function testDatabaseConnection() {
 
 app.post('/api/products', async (req, res) => {
     try {
-      const { brand, name, size, color, image, gender } = req.body;
-  
-  
+      const { brand, name, size, color, gender } = req.body;
+
       const connection = await mysql.createConnection(dbConfig);
   
       const [result] = await connection.execute(
-        'INSERT INTO produtos (brand, name, size, color, image, gender) VALUES (?, ?, ?, ?, ?, ?)',
-        [brand, name, size, color, image, gender]
+         'INSERT INTO produtos (brand, name, size, color, gender) VALUES (?, ?, ?, ?, ?)',
+         [brand, name, size, color, gender]
       );
   
       await connection.end();
   
-      res.status(201).json({ id: result.insertId, brand, name, size, color, image, gender });
+      res.status(201).json({ id: result.insertId, brand, name, size, color, gender });
     } catch (error) {
       console.error('Erro ao criar o produto:', error);
       res.status(500).json({ error: 'Erro ao criar o produto' });
@@ -103,23 +102,22 @@ app.delete('/api/products/:id', async (req, res) => {
 
     app.put('/api/products/:id', async (req, res) => {
     try {
-      const { brand, name, size, color, image, gender } = req.body;
+      const { brand, name, size, color, gender } = req.body;
       const { id } = req.params;
 
-    const connection = await mysql.createConnection(dbConfig);
+      const connection = await mysql.createConnection(dbConfig);
 
-    const [result] = await connection.execute(
-        'UPDATE produtos SET brand=?, name=?, size=?, color=?, image=?, gender=? WHERE id=?', [brand, name, size, color, image, gender, id]
+      const [result] = await connection.execute(
+        'UPDATE produtos SET brand=?, name=?, size=?, color=?, gender=? WHERE id=?', [brand, name, size, color, gender, id]
+      );
 
-    );
-
-    await connection.end();
-
-    if (result.affectedRows === 0) {
-      res.status(404).json({ error: 'Produto não encontrado' });
-    } else {
-      res.json({ id, brand, name, size, color, image, gender });
-    }
+      await connection.end();
+        
+      if (result.affectedRows === 0) {
+        res.status(404).json({ error: 'Produto não encontrado' });
+      } else {
+        res.json({ id, brand, name, size, color, gender });
+      }
   } catch (error) {
     console.error('Erro ao atualizar o produto:', error);
     res.status(500).json({ error: 'Erro ao atualizar o produto' });
