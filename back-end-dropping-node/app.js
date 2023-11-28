@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const dbConfig = {
   host: '20.195.206.76',
   user: 'admin',
-  password: '@dm!n',
+  password: '@dm',
   database: 'dropping',
 };
 
@@ -104,14 +104,10 @@ app.delete('/api/products/:id', async (req, res) => {
     }
   });
 
-  app.put('/api/products/:id', async (req, res) => {
-  try {
-    const { brand, name, size, color, image, gender } = req.body;
-    const { id } = req.params;
-
-    if (brand === undefined || name === undefined || size === undefined || color === undefined || image === undefined || gender === undefined) {
-      return res.status(400).json({ error: 'Campos obrigatórios faltando ou com valor indefinido' });
-    }
+    app.put('/api/products/:id', async (req, res) => {
+    try {
+      const { brand, name, size, color, image, gender } = req.body;
+      const { id } = req.params;
 
     const connection = await mysql.createConnection(dbConfig);
 
