@@ -44,7 +44,7 @@ import { useNavigate } from 'react-router-dom';
         }
         
         try {
-          await axios.put(`http://localhost:3000/api/products/${id}`, body);
+          await axios.put(`http://20.195.206.76:3000/api/products/${id}`, body);
           alert("Atualizado com sucesso");
         } catch (error) {
           console.error('Erro ao atualizar produto:', error);
