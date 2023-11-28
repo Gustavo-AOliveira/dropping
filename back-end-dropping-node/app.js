@@ -29,22 +29,19 @@ async function testDatabaseConnection() {
   
   testDatabaseConnection();
 
-  app.post('/api/products', async (req, res) => {
+app.post('/api/products', async (req, res) => {
     try {
-      const { brand, name, size, color, gender } = req.body;
+      const { brand, name, size, color, image, gender } = req.body;
   
-      console.log('Dados do corpo da requisição:', req.body);
   
       const connection = await mysql.createConnection(dbConfig);
   
       const [result] = await connection.execute(
-        'INSERT INTO produtos (brand, name, size, color, gender) VALUES (?, ?, ?, ?, ?)',
-        [brand, name, size, color, gender]
+        'INSERT INTO produtos (brand, name, size, color, image, gender) VALUES (?, ?, ?, ?, ?, ?)',
+        [brand, name, size, color, image, gender]
       );
   
       await connection.end();
-  
-      console.log('Produto criado com sucesso. ID:', result.insertId);
   
       res.status(201).json({ id: result.insertId, brand, name, size, color, image, gender });
     } catch (error) {
@@ -52,7 +49,6 @@ async function testDatabaseConnection() {
       res.status(500).json({ error: 'Erro ao criar o produto' });
     }
   });
-  
   
 
 app.get('/api/products', async (req, res) => {
