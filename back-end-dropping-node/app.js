@@ -31,15 +31,15 @@ async function testDatabaseConnection() {
 
   app.post('/api/products', async (req, res) => {
     try {
-      const { brand, name, size, color, image, gender } = req.body;
+      const { brand, name, size, color, gender } = req.body;
   
       console.log('Dados do corpo da requisição:', req.body);
   
       const connection = await mysql.createConnection(dbConfig);
   
       const [result] = await connection.execute(
-        'INSERT INTO produtos (brand, name, size, color, image, gender) VALUES (?, ?, ?, ?, ?, ?)',
-        [brand, name, size, color, image, gender]
+        'INSERT INTO produtos (brand, name, size, color, gender) VALUES (?, ?, ?, ?, ?)',
+        [brand, name, size, color, gender]
       );
   
       await connection.end();
