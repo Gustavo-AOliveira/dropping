@@ -29,10 +29,11 @@ async function testDatabaseConnection() {
   
   testDatabaseConnection();
 
-app.post('/api/products', async (req, res) => {
+  app.post('/api/products', async (req, res) => {
     try {
       const { brand, name, size, color, image, gender } = req.body;
   
+      console.log('Dados do corpo da requisição:', req.body);
   
       const connection = await mysql.createConnection(dbConfig);
   
@@ -43,12 +44,15 @@ app.post('/api/products', async (req, res) => {
   
       await connection.end();
   
+      console.log('Produto criado com sucesso. ID:', result.insertId);
+  
       res.status(201).json({ id: result.insertId, brand, name, size, color, image, gender });
     } catch (error) {
       console.error('Erro ao criar o produto:', error);
       res.status(500).json({ error: 'Erro ao criar o produto' });
     }
   });
+  
   
 
 app.get('/api/products', async (req, res) => {
