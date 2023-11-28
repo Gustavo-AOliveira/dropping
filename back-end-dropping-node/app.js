@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const dbConfig = {
   host: '20.195.206.76',
   user: 'admin',
-  password: '@dm',
+  password: '@dm!n',
   database: 'dropping',
 };
 
