@@ -36,7 +36,7 @@ function CadProduto() {
       };
     
       try {
-        await axios.post('http://localhost:3000/api/products', body);
+        await axios.post('http://20.195.206.76:3000/api/products', body);
         alert("Produto adicionado");
         setIsDisabled(true); 
       } catch (error) {

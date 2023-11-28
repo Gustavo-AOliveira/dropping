@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
     const { id } = useParams();
 
     async function buscarProduto() {
-      let r = await axios.get('http://localhost:3000/api/products/' + id);
+      let r = await axios.get('http://20.195.206.76:3000/api/products/' + id);
 
       setBrand(r.data.brand);
       setName(r.data.name);

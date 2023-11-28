@@ -14,7 +14,7 @@ function ProductManagement() {
 
   async function listarProdutos() {
     try {
-      let resposta = await axios.get('http://localhost:3000/api/products');
+      let resposta = await axios.get('http://20.195.206.76:3000/api/products');
       let produtos = resposta.data;
   
       setListaProdutos(produtos);
@@ -24,7 +24,7 @@ function ProductManagement() {
   }
 
   const handleProductDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/api/products/${id}`).then(() => alert("Produto deletado!")).catch(error => console.log(error));
+    await axios.delete(`http://20.195.206.76:3000/api/products/${id}`).then(() => alert("Produto deletado!")).catch(error => console.log(error));
     window.location.reload();
   }
   
