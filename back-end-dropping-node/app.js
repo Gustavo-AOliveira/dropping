@@ -33,10 +33,6 @@ app.post('/api/products', async (req, res) => {
     try {
       const { brand, name, size, color, image, gender } = req.body;
   
-      if (brand === undefined || name === undefined || size === undefined || color === undefined || image === undefined || gender === undefined) {
-        return res.status(400).json({ error: 'Campos obrigatórios faltando ou com valor indefinido' });
-      }
-  
       const connection = await mysql.createConnection(dbConfig);
   
       const [result] = await connection.execute(
