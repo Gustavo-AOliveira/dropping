@@ -11,9 +11,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: '56624560v',
+  host: '20.195.206.76',
+  user: 'admin',
+  password: '@dm!n',
   database: 'dropping',
 };
 
